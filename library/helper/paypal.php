@@ -127,6 +127,7 @@
           //setting the curl parameters.
           $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, self::$api_other_settings['request_url']);
+          curl_setopt($ch, CURLOPT_PROTOCOLS, CURLPROTO_HTTP | CURLPROTO_HTTPS);
           curl_setopt($ch, CURLOPT_VERBOSE, 1);
 
           //turning off the server and peer verification(TrustManager Concept).
